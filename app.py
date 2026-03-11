@@ -3,26 +3,22 @@ import numpy as np
 import pandas as pd
 import joblib
 
-# 1. Page Configuration
 st.set_page_config(
     page_title="Macroeconomic Forecaster", 
     page_icon="🌍", 
     layout="wide"
 )
 
-# 2. Optimized Model Loader
 @st.cache_resource
 def load_model():
     return joblib.load('gdp_xgboost_model.pkl')
 
 model = load_model()
 
-# 3. Helper Function: AI Policy Optimizer with Individual Constraints
 def optimize_budget(target_country_code, fdi_val, trade_val, total_budget, min_dict):
     np.random.seed(42) 
     n_scenarios = 5000
     
-    # Calculate the total of all specific minimums
     total_min = sum(min_dict.values())
     
     if total_min >= total_budget:
@@ -55,13 +51,13 @@ def optimize_budget(target_country_code, fdi_val, trade_val, total_budget, min_d
     best_idx = np.argmax(preds)
     return opt_df.iloc[best_idx], preds[best_idx]
 
-# 4. App UI Header
+# App UI Header
 st.title("🌍 Global GDP Growth Forecaster")
 st.markdown("### Interactive Machine Learning Model (XGBoost)")
 st.write("Simulate economic scenarios or use the AI Optimizer with custom baseline constraints.")
 st.markdown("---")
 
-# 5. Sidebar - Control Panel
+# Sidebar - Control Panel
 st.sidebar.header("Control Panel")
 
 country_translation_map = {
@@ -96,7 +92,7 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("🎯 AI Policy Optimizer")
 budget_limit = st.sidebar.number_input("Total Budget Limit (% of GDP)", 1.0, 100.0, 25.0)
 
-# 4 Individual Min Sliders
+# Individual Min Sliders
 st.sidebar.write("**Set Minimum Requirements (%):**")
 min_edu = st.sidebar.slider("Min Education", 0.0, 10.0, 2.0, 0.5)
 min_health = st.sidebar.slider("Min Health", 0.0, 10.0, 2.0, 0.5)
@@ -105,7 +101,7 @@ min_infra = st.sidebar.slider("Min Infrastructure", 0.0, 15.0, 3.0, 0.5)
 
 min_constraints = {'edu': min_edu, 'health': min_health, 'mil': min_mil, 'infra': min_infra}
 
-# 6. Main Action Section
+# Main Action Section
 col_a, col_b = st.columns(2)
 
 with col_a:
@@ -129,13 +125,11 @@ with col_a:
 
 with col_b:
     if st.button("🎯 Find Optimal Strategy", use_container_width=True):
-        # 1. Validation Check: Does the budget actually allow for these minimums?
         total_min_required = sum(min_constraints.values())
         
         if total_min_required > budget_limit:
             st.error(f"⚠️ **Infeasible Budget!** Your total minimum requirements ({total_min_required:.1f}%) exceed your Total Budget Limit ({budget_limit:.1f}%). Please lower your minimums or increase the budget.")
         else:
-            # 2. Proceed if the math is valid
             best_params, best_growth = optimize_budget(actual_model_code, fdi, trade, budget_limit, min_constraints)
             st.balloons()
             st.markdown(f"### 🎯 AI Optimization: {selected_country_display}")
@@ -148,7 +142,7 @@ with col_b:
             m2.metric("🏗️ Infrastructure", f"{best_params['Infrastructure Expenditure']:.1f}%")
             
             st.success(f"The Model successfully allocated the remaining {(budget_limit - total_min_required):.1f}% of discretionary budget.")
-# 7. Summary Table
+# Summary Table
 st.markdown("---")
 st.markdown("#### 📝 Current Model Inputs")
 summary_df = pd.DataFrame({
