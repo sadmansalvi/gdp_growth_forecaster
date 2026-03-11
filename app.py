@@ -23,10 +23,22 @@ st.sidebar.header("Control Panel")
 st.sidebar.write("Set the economic parameters:")
 
 country_translation_map = {
-    "United States": "USA", "Germany": "DEU", "Japan": "JPN", 
-    "United Kingdom": "GBR", "France": "FRA", "Italy": "ITA", "Canada": "CAN",
-    "Brazil": "BRA", "Russia": "RUS", "India": "IND", "China": "CHN", "South Africa": "ZAF",
-    "Bangladesh": "BGD", "Pakistan": "PAK", "Sri Lanka": "LKA", "Nepal": "NPL"
+    "United States": "United States", 
+    "Germany": "Germany", 
+    "Japan": "Japan", 
+    "United Kingdom": "United Kingdom", 
+    "France": "France", 
+    "Italy": "Italy", 
+    "Canada": "Canada",
+    "Brazil": "Brazil", 
+    "Russia": "Russian Federation", 
+    "India": "India", 
+    "China": "China", 
+    "South Africa": "South Africa",
+    "Bangladesh": "Bangladesh", 
+    "Pakistan": "Pakistan", 
+    "Sri Lanka": "Sri Lanka", 
+    "Nepal": "Nepal"
 }
 
 ui_groups = {
