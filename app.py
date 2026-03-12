@@ -5,7 +5,7 @@ import joblib
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="Macroeconomic Forecaster", 
+    page_title="GDP Growth Rate Forecaster", 
     layout="wide"
 )
 
