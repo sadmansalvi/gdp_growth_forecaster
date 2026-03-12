@@ -120,6 +120,16 @@ min_mil = st.sidebar.slider("Minimum Military", 0.0, 10.0, 1.0, 0.5)
 min_infra = st.sidebar.slider("Minimum Infrastructure", 0.0, 15.0, 2.0, 0.5)
 min_constraints = {'edu': min_edu, 'health': min_health, 'mil': min_mil, 'infra': min_infra}
 
+
+st.sidebar.markdown("---")
+st.sidebar.subheader("👨‍🎓 About the Author")
+st.sidebar.info(
+    "**Salim Sadman Salvi** \n"
+    "B.Sc. in Pure Mathematics (4th Year)  \n"
+    "Jagannath University, Dhaka  \n\n"
+    "*Final Year Project: Macroeconomic Forecasting via Machine Learning & Stochastic Optimization*"
+)
+
 # 6. Action Buttons
 col_btn1, col_btn2 = st.columns(2)
 
