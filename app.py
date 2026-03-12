@@ -5,7 +5,7 @@ import joblib
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="GDP Growth Rate Forecaster", 
+    page_title="GDP Growth Rate Forecaster for countries", 
     layout="wide"
 )
 
@@ -63,8 +63,8 @@ def optimize_budget(target_country_code, fdi_val, trade_val, total_budget_pct, m
     return opt_df.iloc[best_idx], preds[best_idx]
 
 # 4. App UI Header
-st.title("GDP Growth Rate Forecaster")
-st.markdown("### XGBoost Machine Learning Engine for Budget Allocation")
+st.title("GDP Growth Rate Forecaster for countries")
+st.markdown("### XGBoost Machine Learning Engine for GDP Growth Rate prediction & Budget Allocation")
 st.info(
     "**Disclaimer:** This tool utilizes an XGBoost machine learning model trained exclusively on historical macroeconomic data from 16 specific nations across three economic blocs: the **G7** (United States, Germany, Japan, United Kingdom, France, Italy, Canada), **BRICS** (Brazil, Russia, India, China, South Africa), and **South Asia** (Bangladesh, Pakistan, Sri Lanka, Nepal). "
     "Predictions are probabilistic forecasts, not absolute certainties. Outcomes may deviate from real-world economic conditions due to "
@@ -127,7 +127,7 @@ st.sidebar.info(
     "**Salim Sadman Salvi** \n"
     "B.Sc. in Pure Mathematics (4th Year)  \n"
     "Jagannath University, Dhaka  \n\n"
-    "*Final Year Project: Macroeconomic Forecasting via Machine Learning & Stochastic Optimization*"
+    "*Final Year Project: GDP Growth Rate Forecast and Budget Allocation for Countries*"
 )
 
 # 6. Action Buttons
