@@ -63,7 +63,7 @@ def optimize_budget(target_country_code, fdi_val, trade_val, total_budget_pct, m
     return opt_df.iloc[best_idx], preds[best_idx]
 
 # 4. App UI Header
-st.title("Macroeconomic Policy Forecaster")
+st.title("GDP Growth Rate Forecaster")
 st.markdown("### XGBoost Machine Learning Engine & Stochastic Optimization")
 st.info(
     "**Disclaimer:** This tool utilizes an XGBoost machine learning model trained on historical macroeconomic data. "
