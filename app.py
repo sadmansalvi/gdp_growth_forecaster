@@ -127,7 +127,7 @@ st.sidebar.info(
     "**Salim Sadman Salvi** \n"
     "B.Sc. in Pure Mathematics (4th Year)  \n"
     "Jagannath University, Dhaka  \n\n"
-    "*Final Year Project: Forecasting GDP Growth and Optimizing Budget Allocation for Economies Using Machine Learning Model*"
+    "*Final Year Project: Forecasting GDP Growth and Optimizing Budget Allocation for Economies Using Machine Learning Model"
     "\n"
     "🔗 [LinkedIn](https://www.linkedin.com/in/salim-sadman-salvi-345241276/) ｜ 💻 [GitHub](https://github.com/sadmansalvi) ｜ ✉️ [Email](b200302063@math.jnu.ac.bd)"
 )
