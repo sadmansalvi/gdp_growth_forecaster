@@ -5,7 +5,7 @@ import joblib
 
 # 1. Page Configuration
 st.set_page_config(
-    page_title="Forecasting GDP Growth and Optimizing Budget Allocation for Economies Using Machine Learning Model",
+    page_title="Prediction of GDP Growth Rate of Different Countries and Optimization of Fiscal Budgets Using Machine Learning Model",
     layout="wide"
 )
 
@@ -148,7 +148,7 @@ st.sidebar.info(
     "**Salim Sadman Salvi** \n"
     "B.Sc. in Pure Mathematics (4th Year)  \n"
     "Jagannath University, Dhaka  \n\n"
-    "*Final Year Project: Forecasting GDP Growth and Optimizing Budget Allocation for Economies Using Machine Learning Model*"
+    "*Final Year Project: Prediction of GDP Growth Rate of Different Countries and Optimization of Fiscal Budgets Using Machine Learning Models*"
     "\n"
     "🔗 [LinkedIn](https://www.linkedin.com/in/salim-sadman-salvi-345241276/) ｜ 💻 [GitHub](https://github.com/sadmansalvi) ｜ ✉️ [Email](b200302063@math.jnu.ac.bd)"
 )
