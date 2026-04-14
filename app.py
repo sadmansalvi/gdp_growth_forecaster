@@ -160,7 +160,7 @@ st.sidebar.markdown("---")
 st.sidebar.subheader("👨‍🎓 About the Developer")
 st.sidebar.info(
     "**Salim Sadman Salvi** \n"
-    "B.Sc. in Pure Mathematics (4th Year)  \n"
+    "B.Sc. in Pure Mathematics (Final Year)  \n"
     "Jagannath University, Dhaka  \n\n"
     "*Final Year Project: Prediction of GDP Growth Rate of Different Countries and Optimization of Fiscal Budgets Using Machine Learning Models*"
     "\n"
